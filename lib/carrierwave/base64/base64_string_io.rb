@@ -18,7 +18,7 @@ module Carrierwave
       end
 
       def original_filename
-        File.basename("file.#{@file_format}")
+        File.basename("#{Time.now.to_i}.#{Random.rand(99999)}.#{@file_format}")
       end
 
       private
